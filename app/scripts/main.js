@@ -36,14 +36,22 @@ function expect(target) {
 // 
 // ANSWERS GO HERE
 
-var Dog = function(attributes) {
-  var attributes = attributes || {};
-  this.status = status;
-  this.color = color;
-  this.hungry = hungry;
+var Dog = function(attribute) {
+  var attribute = attribute || {};
+  this.status = attribute.status || 'normal';
+  this.color = attribute.color || 'black';
+  this.hungry = attribute.hungry === undefined ? true : attribute.hungry;
+  this.owner = attribute.owner;
 }
 
-var sadie.status = 'happy';
+var Human = function(attribute) {
+  var attribute = attribute || {};
+  this.cool = attribute.cool;
+  this.hungry = attribute.hungry;
+  this.pet = attribute.pet = function(sadie) {
+    // sadie.status = happy;
+  }
+}
 
 // END ANSWERS
 
