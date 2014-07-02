@@ -49,7 +49,10 @@ var Human = function(attribute) {
   this.cool = attribute.cool;
   this.hungry = attribute.hungry;
   this.pet = attribute.pet = function(sadie) {
-    // sadie.status = happy;
+    sadie.status = 'happy'
+  }
+  this.feed = function(moonshine) {
+    moonshine.hungry = false;
   }
 }
 
