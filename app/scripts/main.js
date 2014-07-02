@@ -44,11 +44,15 @@ var Dog = function(attribute) {
   this.owner = attribute.owner;
 }
 
+// === function(a) {
+//     julia.cool = true;
+//   };
+
 var Human = function(attribute) {
   var attribute = attribute || {};
-  this.cool = attribute.cool;
+  this.cool = attribute.cool === undefined ? false : true;
   this.hungry = attribute.hungry;
-  this.pet = attribute.pet = function(sadie) {
+  this.pet = attribute.pet = function(a) {
     sadie.status = 'happy'
   }
   this.feed = function(moonshine) {
